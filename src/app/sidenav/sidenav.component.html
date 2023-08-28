@@ -1,0 +1,54 @@
+<mat-sidenav-container>
+    <mat-sidenav mode="side" opened>
+      <h1>Alec Frey</h1>
+      <mat-card>
+        <button mat-flat-button routerLink="/home">
+          <mat-icon>home</mat-icon>
+          <span>Home</span>
+        </button>
+        </mat-card>
+      <mat-card>
+        <button mat-flat-button routerLink="/employment">
+          <mat-icon>work</mat-icon>
+          <span>Employment</span>
+        </button>
+      </mat-card>
+      <mat-card>
+        <button mat-flat-button routerLink="/projects">
+          <mat-icon>apps</mat-icon>
+          <span>Projects</span>
+        </button>
+      </mat-card>
+      <mat-card>
+        <button mat-flat-button routerLink="/senior-design">
+          <mat-icon>design_services</mat-icon>
+          <span>Senior Design</span>
+        </button>
+      </mat-card>
+      <mat-card>
+        <button mat-flat-button routerLink="/reflections">
+          <mat-icon>refresh</mat-icon>
+          <span>Reflections</span>
+        </button>
+      </mat-card>
+      <mat-card>
+        <button mat-flat-button routerLink="/resume">
+          <mat-icon>contact_page</mat-icon>
+          <span>Resume</span>
+        </button>
+      </mat-card>
+      <mat-card>
+        <button mat-flat-button routerLink="/contact">
+          <mat-icon>account_circle</mat-icon>
+          <span>Contact</span>
+        </button>
+      </mat-card> 
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-card>
+        <mat-card-content>
+          <router-outlet></router-outlet>
+        </mat-card-content>
+    </mat-card>
+    </mat-sidenav-content>
+</mat-sidenav-container>
