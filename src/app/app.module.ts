@@ -11,13 +11,15 @@ import { SeniordesignComponent } from './seniordesign/seniordesign.component';
 import { ResumeComponent } from './resume/resume.component';
 import { ContactComponent } from './contact/contact.component';
 import { ReflectionsComponent } from './reflections/reflections.component';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 @NgModule({
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SidenavComponent
+    SidenavComponent,
+    PdfViewerModule
   ],
   declarations: [ AppComponent ],
   bootstrap: [ AppComponent ],

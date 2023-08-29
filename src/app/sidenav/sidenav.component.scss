@@ -16,11 +16,25 @@ mat-card {
     color: black;
 }
 
+mat-icon {
+    vertical-align: bottom;
+    padding-right: 15px;
+}
+
+.is-active {
+    background-color: whitesmoke;
+}
+
 h1 {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
-    padding-top: 25px;
+    padding-top: 15px;
+    padding-bottom: 5px;
     font-size: xx-large;
 }
 
-
+.bottom {
+    position: absolute; 
+    bottom: 0px;
+    width: 100%;
+}

@@ -1,1 +1,21 @@
-<mat-card-title>Resume</mat-card-title>
+
+<mat-card-title>Resume
+    <button mat-flat-button>
+        <mat-icon>file_download</mat-icon>
+        <span>Download</span>
+    </button>
+</mat-card-title>
+<pdf-viewer
+    [src]="pdfSrc"
+    [rotation]="0"
+    [original-size]="true"
+    [show-all]="true"
+    [fit-to-page]="false"
+    [zoom]="1"
+    [stick-to-page]="false"
+    [render-text]="true"
+    [external-link-target]="'blank'"
+    [autoresize]="true"
+    [show-borders]="true"
+    >
+</pdf-viewer>

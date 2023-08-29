@@ -1,5 +1,15 @@
+mat-card {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 25px;
+    text-align: center;
+    color: black;
+    background-color: beige;
+}
+
 mat-card-title {
     text-align: left;
+    margin-bottom: 10px;
 }
 
 h3 {
@@ -14,6 +24,7 @@ p {
 
 span {
     display: block;
+    padding-top: 10px;
 }
 
 .today-aim {
@@ -30,4 +41,8 @@ span {
 
 .newman-esports {
     margin-top: 25px;
+}
+
+li {
+    padding-left: 10px;
 }
