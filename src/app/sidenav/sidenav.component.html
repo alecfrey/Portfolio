@@ -1,5 +1,5 @@
-<mat-sidenav-container>
-  <mat-sidenav mode="side" opened>
+<mat-sidenav-container autosize>
+  <mat-sidenav mode="side" opened="isExpanded">
     <mat-nav-list>
       <h1>Alec Frey</h1>
       <mat-divider></mat-divider>
@@ -40,14 +40,19 @@
       <mat-divider></mat-divider>
       <div class="bottom">
         <mat-divider></mat-divider>
-        <mat-list-item *ngIf="isOpen" (click)="closeSidenav()">
-            <mat-icon>arrow_back</mat-icon>
+
+
+        <mat-list-item (click)="retractSidenav()">
+            <mat-icon class="chevron_button" [ngClass]="{ rotated: isExpanded }">chevron_right</mat-icon>
             <span>Collapse</span>
         </mat-list-item> 
-        <mat-list-item *ngIf="!isOpen" (click)="openSidenav()">
-            <mat-icon>arrow_forward</mat-icon>
-            <span>Expand</span>
-        </mat-list-item> 
+
+
+
+     
+
+
+
       </div>
     </mat-nav-list>
   </mat-sidenav>

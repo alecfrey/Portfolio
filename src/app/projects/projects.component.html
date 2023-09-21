@@ -1,56 +1,30 @@
 <mat-card-title>Projects</mat-card-title>
-<mat-card>
-  <div class="today-aim">
-    <h3>Today Aim - Accomplish Something Today</h3>
-    <p>
-      Today Aim is an iOS app that was created to help highlight all the tasks people accomplish in their daily lives. This application was created as a solo project.
-      Today Aim was available to download on the App Store previously, but it is no longer supported.
-      <span>Brief Description:</span>
-      <li>Set one aim to accomplish at the start of each day</li>
-      <li>Record when the aim was accomplished</li>
-      <li>Sort collection by aims that you've accomplished or favorited</li>
-      <li>Calendar view allows for a bigger picture on the amount of aims created and accomplished</li>
-      <span>Technical Skills:</span>
-      <li>SwiftUI</li>
-      <li>Core Data Storage</li>
-      <li>Gained experience of whole development cycle from the idea to the deployment</li>
-    </p>
-  </div>
-</mat-card>
-<mat-card>
-  <div class="financio">
-    <h3>Financio - Personal Finance Application</h3>
-    <p>
-      Financio is a personal finance application for android that I developed with two others, Jeffery Kasper & Parker Schmitz, during my sophomore year at Iowa State.
-      Financio allows for a user to set a monthly budget and see how their expenses add up in comparison to their allotted budget.
-      <span>Brief Description:</span>
-      <li>Input all expenses to help recognize spending habits with visuals</li>
-      <li>Targeted toward college students to help decrease spending</li>
-      <li>User login with database</li>
-      <li>Add and message friends in app</li>
-      <span>Technical Skills:</span>
-      <li>Java in Android Studio</li>
-      <li>Android Volley, Spring Boot, MySQL, Web Sockets, GitLab</li>
-      <li>Gained experience working with a team while using version control</li>
-    </p>
-  </div>
-</mat-card>
-<mat-card>
-  <div class="shifty">
-    <h3>Shifty - Java Game</h3>
-    <p>
-      Shifty is a short project I developed with two others, Tyler Atkinson & Nathan Cook, during our freshmen year at Iowa State.
-      It is a simple java platformer game built using the libGDX game engine.
-    </p>
-  </div>
-</mat-card>
-<mat-card>
-  <div class="newman-esports">
-    <h3>Founded Esports Program at Newman Catholic High School</h3>
-    <p>
-      Student leader that created and organized the Esports program at Newman Catholic High.
-      Acquired necessary components and assembled six computers to be used.
-      Set up and ran the Twitter account and streamed matches to Twitch.
-    </p>
-  </div>
-</mat-card>
+
+<div class="project">
+  <mat-card *ngFor="let project of projects; let i = index">
+    <div class="title">
+      <h3> {{ project.title }} </h3>
+      <button mat-icon-button (click)="expandProject(i)" *ngIf="doesProjectExpand(i)">
+        <mat-icon *ngIf="!project.isExpanded">keyboard_arrow_down</mat-icon>
+        <mat-icon *ngIf="project.isExpanded">keyboard_arrow_up</mat-icon>
+      </button>
+    </div>
+    <p> {{ project.description }} </p>
+    <div class="expansion" *ngIf="project.isExpanded">
+      <span *ngIf="project.details">Brief Description:</span>
+      <li *ngFor="let detail of project.details"> 
+        {{ detail }} 
+      </li>
+      <span *ngIf="project.skills">Technical Skills:</span>
+      <li *ngFor="let skill of project.skills"> 
+        {{ skill }} 
+      </li>
+      <span *ngIf="project.pictureURL">Pictures:</span>
+      <div class="picture" *ngFor="let picture of project.pictureURL"> 
+        
+      </div>
+      <span *ngIf="!project.videoURL">Video:</span>
+      <app-video-player></app-video-player>
+    </div>
+  </mat-card>
+</div>

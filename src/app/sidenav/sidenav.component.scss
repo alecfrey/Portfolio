@@ -1,7 +1,15 @@
 mat-sidenav {
     height: 100vh;
-    width: 30vh;
     background-color: lightcoral;
+
+    .chevron-button {
+        transition: 300ms ease-in-out;
+        transform: rotate(0deg);
+    }
+
+    .chevron-button-rotated {
+        transform: rotate(180deg);
+    }
 }
 
 mat-sidenav-content {

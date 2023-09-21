@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, Component } from '@angular/core';
 import { MatSidenavModule } from '@angular/material/sidenav'
 import { MatCardModule } from '@angular/material/card'
 import { MatButtonModule } from '@angular/material/button'
@@ -14,17 +14,15 @@ import { MatListModule } from '@angular/material/list'
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss'],
   standalone: true,
-  imports: [ MatSidenavModule, MatCardModule, HomeComponent, MatButtonModule, MatIconModule, RouterOutlet, RouterModule, NgIf, MatListModule ]
+  imports: [ MatSidenavModule, MatCardModule, HomeComponent, MatButtonModule, MatIconModule, RouterOutlet, RouterModule, NgIf, MatListModule ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 
 export class SidenavComponent {
-  public isOpen: boolean = true;
+  public isExpanded: boolean = false;;
 
-  closeSidenav() {
-    this.isOpen = false;
-  }
 
-  openSidenav() {
-    this.isOpen = true;
+  retractSidenav() {
+    this.isExpanded = !this.isExpanded;
   }
 }

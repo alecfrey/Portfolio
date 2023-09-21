@@ -12,6 +12,12 @@ import { ResumeComponent } from './resume/resume.component';
 import { ContactComponent } from './contact/contact.component';
 import { ReflectionsComponent } from './reflections/reflections.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { VgCoreModule } from '@videogular/ngx-videogular/core';
+import { VgControlsModule } from '@videogular/ngx-videogular/controls';
+import { VgOverlayPlayModule } from '@videogular/ngx-videogular/overlay-play';
+import { VgBufferingModule } from '@videogular/ngx-videogular/buffering';
+import { VgStreamingModule } from '@videogular/ngx-videogular/streaming';
+import { VideoPlayerComponent } from './video-player/video-player.component';
 
 @NgModule({
   imports: [
@@ -19,7 +25,12 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
     AppRoutingModule,
     BrowserAnimationsModule,
     SidenavComponent,
-    PdfViewerModule
+    PdfViewerModule,
+    VgCoreModule,
+    VgControlsModule,
+    VgOverlayPlayModule,
+    VgBufferingModule,
+    VgStreamingModule
   ],
   declarations: [ AppComponent ],
   bootstrap: [ AppComponent ],

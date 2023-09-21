@@ -14,8 +14,8 @@ mat-card-title {
 
 h3 {
     text-align: left;
-    line-height: 50%;
     font-weight: bold;
+    margin-top: 10px;
 }
 
 p {
@@ -27,22 +27,20 @@ span {
     padding-top: 10px;
 }
 
-.today-aim {
-    margin-top: 25px;
-}
-
-.financio {
-    margin-top: 25px;
-}
-
-.shifty {
-    margin-top: 25px;
-}
-
-.newman-esports {
+.project {
     margin-top: 25px;
 }
 
 li {
     padding-left: 10px;
+}
+
+.expansion {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.title {
+    display: flex; 
+    justify-content: space-between;  
 }
