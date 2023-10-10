@@ -12,7 +12,6 @@ mat-card {
 h3 {
     text-align: left;
     margin-top: 10px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
     color: black;
 }
 
@@ -35,4 +34,9 @@ h3 {
 
 .expanded {
     margin-top: 25px;
+}
+
+a {
+    color: black;
+    text-decoration: none; 
 }

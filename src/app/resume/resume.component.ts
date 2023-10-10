@@ -14,5 +14,5 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
 })
 
 export class ResumeComponent {
-  pdfSrc = 'https://alecfrey.me/resume.pdf';
+  pdfSrc = '../../assets/docs/resume.pdf';
 }
