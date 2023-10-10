@@ -1,12 +1,23 @@
 h3 {
     text-align: left;
+    margin-top: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
     color: black;
+    font-weight: bold;
+}
+
+.home {
+    margin-top: 25px;
+}
+
+h4 {
+    text-align: left;
 }
 
 mat-card {
-    margin: 10px;
-    color: black;
+    text-align: left;
+    padding-left: 15px;
+    background-color: beige;
 }
 
 mat-card-title {

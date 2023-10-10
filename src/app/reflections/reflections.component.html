@@ -1,1 +1,109 @@
 <mat-card-title>Reflections</mat-card-title>
+<div class="reflections">
+    <div class="ethics">
+        <mat-card>
+            <div class="title">
+                <h3><b>Ethics Reflection</b> - CPR E 394</h3>
+                <button class="arrow" mat-icon-button (click)="expandReflection(1)">
+                    <mat-icon *ngIf="!isEthicsExpanded">keyboard_arrow_down</mat-icon>
+                    <mat-icon *ngIf="isEthicsExpanded">keyboard_arrow_up</mat-icon>
+                </button>
+            </div>
+            <div class="intro">
+                <p>Add basic intro information here.</p>
+                <button mat-button *ngIf="isEthicsExpanded">
+                    <mat-icon>file_download</mat-icon>
+                    <span>Download</span>
+                </button>
+            </div>
+            <div class="expanded" *ngIf="isEthicsExpanded">
+                <p>
+                    Technology should be used to positively impact life throughout the world. This is why
+                    following a code of ethics is so important. With being an engineer, you need to commit yourself
+                    to the highest ethical and professional conduct. Educating yourself on prior ethical issues will
+                    help in knowing how to respond to new ethical situations that may arise. Reflecting upon your
+                    personal morals may assist you in upholding righteous decisions.
+                </p>
+                <p>
+                    A code of ethics outlines an organization’s guidelines in regards to honesty, integrity, and
+                    professionalism. Organizations create a code of ethics to list their expectations to all members
+                    involved within the organization. Following the ethics of the organization or company you work
+                    for is expected, since it instills trust within the customers. When faced with an ethical situation
+                    it’s important to take it seriously, and consult your company’s code of ethics. Using prior
+                    experience, good or bad, will help to make a better informed decision this time around. Also, all
+                    of the consequences of your end decision need to be accounted for, to ensure your decision is the
+                    ethical one. In class we discussed prior ethical situations, and how the given companies handled
+                    them. Through these situations I realized that companies don’t always uphold their code of
+                    ethics, as seen with the Ford Pinto issue. Ford realized prior to shipment that the car was
+                    susceptible to catching fire when rear-ended at speeds over 20 miles per hour. They decided to go
+                    ahead with the shipments, as they calculated that it would be cheaper to deal with consequences,
+                    than it would be for the engineers to actually fix the problem. This unethical decision led to the
+                    death of a driver in a Ford Pinto not long after.
+                </p>
+                <p>
+                    The class discussion on ethics seemed pretty united. Everyone upheld the IEEE Code of
+                    Ethics when posting their responses to the given ethical situation examples. Although I agreed
+                    with all the responses given by the class, there is a possibility that certain situations can bring
+                    with it a variety of decisions. One of the ethical situations that I read about involved the police
+                    wanting to get Amazon to hand over data recorded by an Amazon Echo that may help with their
+                    murder investigation. While I believe consumer privacy is most important, even in police
+                    investigations, I could see there being an differing view to mine. When considering how the
+                    Virtue of Ethics applies to this situation, I believe that the three most applicable virtues are
+                    responsibility, honesty, and integrity. Amazon's responsibility in this situation is to keep
+                    consumer privacy as their number one priority. In doing so, consumers will see the company as
+                    having integrity and honesty, since they didn’t go against their ethics. The other three virtues that
+                    don’t apply as much in this situation include fidelity, charity, and self-discipline.
+                </p>
+                <p>
+                    Throughout life there will be situations that arise in which an ethical decision will need to
+                    be made. Consulting your organization’s or company’s code of ethics should be your first step in
+                    the process, as well as considering prior ethical situations, and how they were handled. All of the
+                    consequences that will come as a result of the decision should be considered to help ensure the
+                    final decision is the moral one.
+                </p>
+            </div>
+        </mat-card>
+    </div>
+    <div class="gen-ed">
+        <mat-card>
+            <div class="title">
+                <h3><b>General Education Reflection</b> - CPR E 494</h3>
+                <button class="arrow" mat-icon-button (click)="expandReflection(2)">
+                    <mat-icon *ngIf="!isGenExpanded">keyboard_arrow_down</mat-icon>
+                    <mat-icon *ngIf="isGenExpanded">keyboard_arrow_up</mat-icon>
+                </button>
+            </div>
+            <div class="intro">
+                <p>Add basic intro information here.</p>
+                <button mat-button *ngIf="isGenExpanded">
+                    <mat-icon>file_download</mat-icon>
+                    <span>Download</span>
+                </button>
+            </div>
+            <div class="expanded" *ngIf="isGenExpanded">
+                <p></p>
+            </div>
+        </mat-card>
+    </div>
+    <div class="cumulative">
+        <mat-card>
+            <div class="title">
+                <h3><b>Cumulative Reflection</b> - CPR E 494</h3>
+                <button class="arrow" mat-icon-button (click)="expandReflection(3)">
+                    <mat-icon *ngIf="!isCumulativeExpanded">keyboard_arrow_down</mat-icon>
+                    <mat-icon *ngIf="isCumulativeExpanded">keyboard_arrow_up</mat-icon>
+                </button>
+            </div>
+            <div class="intro">
+                <p>Add basic intro information here.</p>
+                <button mat-button *ngIf="isCumulativeExpanded">
+                    <mat-icon>file_download</mat-icon>
+                    <span>Download</span>
+                </button>
+            </div>
+            <div class="expanded" *ngIf="isCumulativeExpanded">
+                <p></p>
+            </div>
+        </mat-card>
+    </div>
+</div>

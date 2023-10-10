@@ -18,6 +18,11 @@ import { VgOverlayPlayModule } from '@videogular/ngx-videogular/overlay-play';
 import { VgBufferingModule } from '@videogular/ngx-videogular/buffering';
 import { VgStreamingModule } from '@videogular/ngx-videogular/streaming';
 import { VideoPlayerComponent } from './video-player/video-player.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   imports: [
@@ -30,7 +35,12 @@ import { VideoPlayerComponent } from './video-player/video-player.component';
     VgControlsModule,
     VgOverlayPlayModule,
     VgBufferingModule,
-    VgStreamingModule
+    VgStreamingModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   declarations: [ AppComponent ],
   bootstrap: [ AppComponent ],

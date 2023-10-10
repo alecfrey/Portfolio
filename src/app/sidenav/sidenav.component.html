@@ -1,36 +1,39 @@
-<mat-sidenav-container autosize>
-  <mat-sidenav mode="side" opened="isExpanded">
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <h1>alec frey</h1>
     <mat-nav-list>
-      <h1>Alec Frey</h1>
       <mat-divider></mat-divider>
       <mat-list-item routerLink="/home" [routerLinkActive]="['is-active']">
-          <mat-icon>home</mat-icon>
-          <span>Home</span>
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
       </mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item routerLink="/employment" [routerLinkActive]="['is-active']">
-          <mat-icon>work</mat-icon>
-          <span>Employment</span>
+        <mat-icon>work</mat-icon>
+        <span>Employment</span>
       </mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item routerLink="/projects" [routerLinkActive]="['is-active']">
-          <mat-icon>apps</mat-icon>
-          <span>Projects</span>
+        <mat-icon>apps</mat-icon>
+        <span>Projects</span>
       </mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item routerLink="/senior-design" [routerLinkActive]="['is-active']">
-          <mat-icon>design_services</mat-icon>
-          <span>Senior Design</span>
+        <mat-icon>design_services</mat-icon>
+        <span>Senior Design</span>
       </mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item routerLink="/reflections" [routerLinkActive]="['is-active']">
-          <mat-icon>refresh</mat-icon>
-          <span>Reflections</span>
+        <mat-icon>refresh</mat-icon>
+        <span>Reflections</span>
       </mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item routerLink="/resume" [routerLinkActive]="['is-active']">
-          <mat-icon>contact_page</mat-icon>
-          <span>Resume</span>
+        <mat-icon>contact_page</mat-icon>
+        <span>Resume</span>
       </mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item routerLink="/contact" [routerLinkActive]="['is-active']">
@@ -38,22 +41,6 @@
         <span>Contact</span>
       </mat-list-item> 
       <mat-divider></mat-divider>
-      <div class="bottom">
-        <mat-divider></mat-divider>
-
-
-        <mat-list-item (click)="retractSidenav()">
-            <mat-icon class="chevron_button" [ngClass]="{ rotated: isExpanded }">chevron_right</mat-icon>
-            <span>Collapse</span>
-        </mat-list-item> 
-
-
-
-     
-
-
-
-      </div>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -61,6 +48,11 @@
       <mat-card-content>
         <router-outlet></router-outlet>
       </mat-card-content>
-    </mat-card>
+    </mat-card>  
+    <div class="bottom" *ngIf="(isHandset$ | async)">
+      <button mat-fab (click)="drawer.toggle()">
+        <mat-icon mat-fab class="chevron_button" [ngClass]="{ rotated: drawer.opened }">chevron_right</mat-icon>
+      </button>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

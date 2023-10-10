@@ -14,8 +14,11 @@ mat-card-title {
 
 h3 {
     text-align: left;
-    font-weight: bold;
     margin-top: 10px;
+    font-size: large;
+    .title {
+        font-weight: bold;
+    }
 }
 
 p {

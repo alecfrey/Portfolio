@@ -3,7 +3,7 @@
 <div class="project">
   <mat-card *ngFor="let project of projects; let i = index">
     <div class="title">
-      <h3> {{ project.title }} </h3>
+      <h3><b>{{ project.title }}</b>{{ project.subtitle }}</h3>
       <button mat-icon-button (click)="expandProject(i)" *ngIf="doesProjectExpand(i)">
         <mat-icon *ngIf="!project.isExpanded">keyboard_arrow_down</mat-icon>
         <mat-icon *ngIf="project.isExpanded">keyboard_arrow_up</mat-icon>

@@ -7,6 +7,7 @@ import { VideoPlayerComponent } from '../video-player/video-player.component';
 
 interface Project {
   title: string;
+  subtitle?: string;
   description: string;
   details?: string[];
   skills?: string[];
@@ -58,7 +59,8 @@ export class ProjectsComponent {
    */
   projects: Project[] = [
     {
-      title: 'Today Aim - Accomplish Something Today',
+      title: 'Today Aim',
+      subtitle: ' - Accomplish Something Today',
       description: 'Today Aim is an iOS app that was created to help highlight all the tasks people accomplish in their daily lives. This application was created as a solo project. Today Aim was available to download on the App Store previously, but it is no longer supported.',
       details: [
         'Set one aim to accomplish at the start of each day',
@@ -75,7 +77,8 @@ export class ProjectsComponent {
       pictureURL: ['http://alecfrey.me/resume']
     },
     {
-      title: 'Financio - Personal Finance Application',
+      title: 'Financio',
+      subtitle: ' - Personal Finance Application',
       description: 'Financio is a personal finance application for android that I developed with two others, Jeffery Kasper & Parker Schmitz, during my sophomore year at Iowa State. Financio allows for a user to set a monthly budget and see how their expenses add up in comparison to their allotted budget.',
       details: [
         'Input all expenses to help recognize spending habits with visuals',
@@ -91,12 +94,14 @@ export class ProjectsComponent {
       isExpanded: false
     },
     {
-      title: 'Shifty - Java Game',
+      title: 'Shifty',
+      subtitle: ' - Java Game',
       description: 'Shifty is a short project I developed with two others, Tyler Atkinson & Nathan Cook, during our freshmen year at Iowa State. It is a simple java platformer game built using the libGDX game engine.',
       isExpanded: false
     },
     {
-      title: 'Founded Esports Program at Newman Catholic High School',
+      title: 'Founded Esports Program',
+      subtitle: ' - Newman Catholic High School',
       description: 'Student leader that created and organized the Esports program at Newman Catholic High. Acquired necessary components and assembled six computers to be used. Set up and ran the Twitter account and streamed matches to Twitch.',
       isExpanded: false
     }

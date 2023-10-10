@@ -1,3 +1,38 @@
 mat-card-title {
     text-align: left;
 }
+
+mat-card {
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;;
+    background-color: beige;
+}
+
+h3 {
+    text-align: left;
+    margin-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    color: black;
+}
+
+.reflections {
+    margin-top: 25px;
+}
+
+.ethics {
+    margin-bottom: 25px;
+}
+
+.gen-ed {
+    margin-bottom: 25px;
+}
+
+.title {
+    display: flex; 
+    justify-content: space-between;  
+}
+
+.expanded {
+    margin-top: 25px;
+}
