@@ -10,7 +10,7 @@
       </button>
     </div>
     <p> {{ project.description }} </p>
-    <div class="expansion" *ngIf="project.isExpanded">
+    <div class="expansion" *ngIf="project.isExpanded" >
       <span *ngIf="project.details">Brief Description:</span>
       <li *ngFor="let detail of project.details"> 
         {{ detail }} 
@@ -19,12 +19,10 @@
       <li *ngFor="let skill of project.skills"> 
         {{ skill }} 
       </li>
-      <span *ngIf="project.pictureURL">Pictures:</span>
-      <div class="picture" *ngFor="let picture of project.pictureURL"> 
-        
-      </div>
-      <span *ngIf="!project.videoURL">Video:</span>
-      <app-video-player></app-video-player>
+      <ng-image-slider *ngIf="project.pictures" [images]="imageObject" #nav></ng-image-slider>
+      <video *ngIf="project.videoURL" class="video-bottom" controls>
+				<source src=" {{ project.videoURL }}" type="video/mp4">
+			</video>
     </div>
   </mat-card>
 </div>

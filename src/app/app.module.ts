@@ -12,17 +12,12 @@ import { ResumeComponent } from './resume/resume.component';
 import { ContactComponent } from './contact/contact.component';
 import { ReflectionsComponent } from './reflections/reflections.component';
 import { PdfViewerModule } from 'ng2-pdf-viewer';
-import { VgCoreModule } from '@videogular/ngx-videogular/core';
-import { VgControlsModule } from '@videogular/ngx-videogular/controls';
-import { VgOverlayPlayModule } from '@videogular/ngx-videogular/overlay-play';
-import { VgBufferingModule } from '@videogular/ngx-videogular/buffering';
-import { VgStreamingModule } from '@videogular/ngx-videogular/streaming';
-import { VideoPlayerComponent } from './video-player/video-player.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { NgImageSliderModule } from 'ng-image-slider';
 
 @NgModule({
   imports: [
@@ -31,16 +26,12 @@ import { MatListModule } from '@angular/material/list';
     BrowserAnimationsModule,
     SidenavComponent,
     PdfViewerModule,
-    VgCoreModule,
-    VgControlsModule,
-    VgOverlayPlayModule,
-    VgBufferingModule,
-    VgStreamingModule,
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    NgImageSliderModule
   ],
   declarations: [ AppComponent ],
   bootstrap: [ AppComponent ],

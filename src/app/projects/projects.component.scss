@@ -47,3 +47,34 @@ li {
     display: flex; 
     justify-content: space-between;  
 }
+
+@media (max-width: 1450px) {
+	.video-right {
+		display: none;
+	}
+
+	.video-bottom {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+		max-height: 471px;
+		max-width: 620px;
+		float: none;
+	}
+}
+
+@media (min-width: 1250px) {
+	.slide-container {
+		padding-top: 0;
+		height: 768px;
+		width: 1024px;
+	}
+}
+
+video {
+	border: 5px solid black;
+	float: right;
+	margin-left: 40px;
+    margin-top: 10px;
+}

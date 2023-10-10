@@ -3,7 +3,8 @@ import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
-import { VideoPlayerComponent } from '../video-player/video-player.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgImageSliderComponent, NgImageSliderModule } from 'ng-image-slider';
 
 interface Project {
   title: string;
@@ -11,7 +12,7 @@ interface Project {
   description: string;
   details?: string[];
   skills?: string[];
-  pictureURL?: string[];
+  pictures?: boolean;
   videoURL?: string;
   isExpanded: boolean;
 }
@@ -21,7 +22,7 @@ interface Project {
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
   standalone: true,
-  imports: [ MatCardModule, MatIconModule, MatButtonModule, NgIf, NgFor, VideoPlayerComponent ]
+  imports: [ MatCardModule, MatIconModule, MatButtonModule, NgIf, NgFor, NgImageSliderModule],
 })
 
 export class ProjectsComponent {
@@ -48,7 +49,7 @@ export class ProjectsComponent {
    * @returns true if project can expand
    */
   public doesProjectExpand(index: number) {
-    if (this.projects[index].details || this.projects[index].skills || this.projects[index].pictureURL || this.projects[index].videoURL) {
+    if (this.projects[index].details || this.projects[index].skills || this.projects[index].pictures || this.projects[index].videoURL) {
       return true;
     }
     return false;
@@ -74,7 +75,8 @@ export class ProjectsComponent {
         'Gained experience of whole development cycle from the idea to the deployment'
       ],
       isExpanded: false,
-      pictureURL: ['http://alecfrey.me/resume']
+      videoURL: '../../assets/pics/todayaim.mp4',
+      pictures: false
     },
     {
       title: 'Financio',
@@ -91,19 +93,57 @@ export class ProjectsComponent {
         'Android Volley, Spring Boot, MySQL, Web Sockets, GitLab',
         'Gained experience working with a team while using version control'
       ],
-      isExpanded: false
+      isExpanded: false,
+      videoURL: '../../assets/pics/financio.mp4',
+      pictures: false
     },
     {
       title: 'Shifty',
       subtitle: ' - Java Game',
       description: 'Shifty is a short project I developed with two others, Tyler Atkinson & Nathan Cook, during our freshmen year at Iowa State. It is a simple java platformer game built using the libGDX game engine.',
-      isExpanded: false
+      isExpanded: false,
+      videoURL: '../../assets/pics/shifty.mp4',
+      pictures: false
     },
     {
       title: 'Founded Esports Program',
       subtitle: ' - Newman Catholic High School',
       description: 'Student leader that created and organized the Esports program at Newman Catholic High. Acquired necessary components and assembled six computers to be used. Set up and ran the Twitter account and streamed matches to Twitch.',
-      isExpanded: false
+      isExpanded: false,
+      pictures: true
     }
   ]
+
+  imageObject: Array<object> = [{
+    image: '../../assets/pics/esports/esports1.jpg',
+    thumbImage: '../../assets/pics/esports/esports1.jpg',
+    title: 'Newman Esports Team',
+    order: 1
+  }, {
+    image: '../../assets/pics/esports/esports2.jpg',
+    thumbImage: '../../assets/pics/esports/esports2.jpg',
+    title: 'IAHSEA Rocket League Match',
+    order: 2
+  }, {
+    image: '../../assets/pics/esports/esports3.jpg',
+    thumbImage: '../../assets/pics/esports/esports3.jpg',
+    title: 'Team Computers Built',
+    order: 3
+  }, {
+    image: '../../assets/pics/esports/esports4.jpg',
+    thumbImage: '../../assets/pics/esports/esports4.jpg',
+    title: 'IAHSEA Match Picture',
+    order: 4
+  }, {
+    image: '../../assets/pics/esports/esports5.jpg',
+    thumbImage: '../../assets/pics/esports/esports5.jpg',
+    title: 'Esports Room',
+    order: 5
+  }, {
+    image: '../../assets/pics/esports/esports6.jpg',
+    thumbImage: '../../assets/pics/esports/esports6.jpg',
+    title: 'Computer Parts Used',
+    order: 6
+  },
+];
 }
