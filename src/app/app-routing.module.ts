@@ -17,7 +17,6 @@ const routes: Routes = [
   { path: 'senior-design', component: SeniordesignComponent },
   { path: 'contact', component: ContactComponent },
   { path: '**', redirectTo: '' },
- // { path: 'detail/:id', component: HeroDetailComponent },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
