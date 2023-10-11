@@ -3,7 +3,7 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <button mat-button>alec frey</button>
+    <button onclick="location.href='https://alecfrey.me'" class="astext"><h1>alec frey</h1></button>
     <mat-nav-list>
       <mat-divider></mat-divider>
       <mat-list-item routerLink="/home" [routerLinkActive]="['is-active']">
