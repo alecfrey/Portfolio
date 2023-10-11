@@ -9,15 +9,14 @@ import { SeniordesignComponent } from './seniordesign/seniordesign.component';
 import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'resume', component: ResumeComponent },
   { path: 'employment', component: EmploymentComponent },
   { path: 'reflections', component: ReflectionsComponent },
   { path: 'senior-design', component: SeniordesignComponent },
   { path: 'contact', component: ContactComponent },
-  { path: '**', redirectTo: '/home' },
+  { path: '**', redirectTo: '' },
  // { path: 'detail/:id', component: HeroDetailComponent },
 ];
 @NgModule({

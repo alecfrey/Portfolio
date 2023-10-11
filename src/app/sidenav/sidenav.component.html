@@ -51,7 +51,7 @@
     </mat-card>  
     <div class="bottom" *ngIf="(isHandset$ | async)">
       <button mat-fab (click)="drawer.toggle()">
-        <mat-icon mat-fab class="chevron_button" [ngClass]="{ rotated: drawer.opened }">chevron_right</mat-icon>
+        <mat-icon mat-fab>chevron_right</mat-icon>
       </button>
     </div>
   </mat-sidenav-content>
