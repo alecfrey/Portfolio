@@ -31,8 +31,7 @@ export class ReflectionsComponent {
     } else if (index == 3) {
       this.isCumulativeExpanded = !this.isCumulativeExpanded;
       this.isGenExpanded = false;
-      this.isGenExpanded = false;
-
+      this.isEthicsExpanded = false;
     }
   }
 }
